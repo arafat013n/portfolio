@@ -1,0 +1,154 @@
+/* Custom styles */
+.hero {
+    /* Replace with your hero image URL */
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    position: relative;
+}
+
+.hero .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.about-me,
+.c_bg {
+    background-color: #f3f4f6;
+}
+
+.client-logo {
+    text-align: center;
+}
+
+.client-logo img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.client-logo img:hover {
+    filter: grayscale(0%);
+}
+
+.client-name {
+    margin-top: 8px;
+    font-size: 0.875rem;
+    /* 14px */
+    color: #6b7280;
+    /* Gray-600 */
+}
+
+.social-links {
+    background-color: #f9fafb;
+}
+
+.social-links .social-btn {
+    transition: transform 0.3s ease;
+}
+
+.social-links .social-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Additional styling for social buttons */
+.social-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 9999px;
+    /* Large value for rounded shape */
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.social-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-overlay {
+    top: 10px;
+    left: 10px;
+    z-index: -1;
+}
+
+.card:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-me .gallery img {
+    transition: transform 0.3s ease;
+}
+
+.about-me .gallery img:hover {
+    transform: scale(1.1);
+}
+
+
+.image-loading {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-loading img {
+  display: none; /* Hide image initially */
+}
+
+.image-loading::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f3; /* Placeholder background color */
+  border-radius: 8px; /* Rounded corners, adjust as needed */
+}
+
+.image-loading.loading::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px; /* Adjust size of loader */
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  border-top-color: #3498db; /* Loader color */
+  animation: spin 1s linear infinite; /* Rotate animation */
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
